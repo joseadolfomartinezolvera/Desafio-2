@@ -14,10 +14,12 @@ public class SpawnManagerX : MonoBehaviour
 
     void Start()
     {
+    //se cambio el InvokeRepeating por Invoker siendo este un mejor metodo 
         Invoke("SpawnRandomBall", startDelay);
     }
 
     // Genera una bola aleatoria en una posición x en la parte superior de la pantalla
+    //se reestrablecio startDeleay utilizando Random.Range() y volviendo a llamar al método SpawnRandomBall() nuevamente desde dentro del propio método.
     void SpawnRandomBall ()
     {
         startDelay = Random.Range(3, 5);
